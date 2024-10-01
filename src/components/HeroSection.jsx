@@ -95,14 +95,11 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className='relative w-full h-[100vh]'>
+    <div className='relative w-full h-full'>
       <canvas className='webgl'></canvas>
-      <motion.div>
         <div className='absolute top-10 left-1/2 transform -translate-x-1/2 text-white lg:mt-96 mt-64 text-5xl md:text-8xl lg:text-8xl ml-1 lg:ml-3 font-semibold tracking-tighter'>
           लोकसीमातिवर्तिन्
         </div>
-      </motion.div>
-
     </div>
   );
 };
