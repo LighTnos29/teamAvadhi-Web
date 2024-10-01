@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import marsTexture from '../assets/images/marsTexture.jpg';
+import { motion } from 'framer-motion'
 
 const HeroSection = () => {
   useEffect(() => {
@@ -88,17 +89,20 @@ const HeroSection = () => {
 
     // Cleanup
     return () => {
-      window.removeEventListener('resize', () => {});
+      window.removeEventListener('resize', () => { });
       canvas.removeEventListener('mousemove', onMouseMove);
     };
   }, []);
 
   return (
-    <div className='relative w-full h-full'>
+    <div className='relative w-full h-[100vh]'>
       <canvas className='webgl'></canvas>
-      <div className='absolute top-10 left-1/2 transform -translate-x-1/2 text-white lg:mt-96 mt-64 text-5xl md:text-8xl lg:text-8xl ml-1 lg:ml-3 font-semibold tracking-tighter'>
-        लोकसीमातिवर्तिन्
-      </div>
+      <motion.div>
+        <div className='absolute top-10 left-1/2 transform -translate-x-1/2 text-white lg:mt-96 mt-64 text-5xl md:text-8xl lg:text-8xl ml-1 lg:ml-3 font-semibold tracking-tighter'>
+          लोकसीमातिवर्तिन्
+        </div>
+      </motion.div>
+
     </div>
   );
 };

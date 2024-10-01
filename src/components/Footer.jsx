@@ -3,11 +3,11 @@ import Logo from '../assets/images/logo.png'
 import Location from '../assets/images/Location.svg'
 import Telephone from '../assets/images/Telephone.svg'
 import Mail from '../assets/images/Mail.svg'
+import {motion} from 'framer-motion'
 
 const Footer = () => {
   return (
     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 text-white pt-28 md:h-[70vh] h-[90vh] md:pl-[20vh] pb-[90vh] md:pb-0 bg-zinc-950'>
-
 
       <div className='mb-10 md:mb-0 flex'>
         <img src={Logo} alt="logo" className='h-20 w-20 m-6' />
@@ -48,9 +48,6 @@ const Footer = () => {
           <img src={Mail} alt="Location-icon" className='h-10 w-10 m-2' />
           <p className='ml-4  mt-3 max-w-44'>xyz@gmail.com</p>
         </div>
-
-
-
       </div>
     </div>
   );
