@@ -15,7 +15,7 @@ const HeroSection = () => {
     const geometry = new THREE.SphereGeometry(3, 64, 64);
     const material = new THREE.MeshStandardMaterial({
       map: texture,
-      roughness: 0.1,
+      roughness: 1,
     });
     const mesh = new THREE.Mesh(geometry, material);
     scene.add(mesh);
@@ -27,7 +27,7 @@ const HeroSection = () => {
     };
 
     // Lights
-    const lights = new THREE.PointLight(0xffa07a, 50, 100);
+    const lights = new THREE.PointLight(0xffa07a, 100, 100);
     lights.position.set(10, 10, 10);
     scene.add(lights);
 

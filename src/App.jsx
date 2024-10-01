@@ -1,4 +1,4 @@
-import Navbar from './components/navbar'
+import Navbar from './components/Navbar'
 import './App.css'
 import AllRoutes from './routes/AllRoutes'
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -11,11 +11,7 @@ function App() {
 
   return (
     <ReactLenis root>
-      <motion.div
-        variants={{
-          hidden: { opacity: 0, y: 75 },
-          visible: { opacity: 1, y: 0 },
-        }}>
+      <motion.div>
         <Router>
           <Navbar />
           <AllRoutes />
