@@ -11,13 +11,13 @@ function App() {
 
   return (
     <ReactLenis root>
-      <motion.div>
-        <Router>
-          <Navbar />
-          <AllRoutes />
-          <Footer/>
-        </Router>
-      </motion.div>
+
+      <Router>
+        <Navbar />
+        <AllRoutes />
+        <Footer />
+      </Router>
+
     </ReactLenis >
   )
 }
