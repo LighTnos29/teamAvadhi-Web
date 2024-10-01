@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import navItems from "../constants/navItems"
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import Logo from "../assets/images/Logo.svg"
+import Logo from "../assets/images/logo.svg"
 
 
 const navbar = () => {
