@@ -8,7 +8,6 @@ const About = () => {
     initial={{ opacity: 0 }}
     whileInView={{ opacity: 1 }}
     transition={{ delay: 0.2 }}
-    viewport={{ once: true, amount: 0.5 }}
       >
         <h1 className="lg:text-6xl text-3xl font-bold text-center pb-10 trac">
           About us
