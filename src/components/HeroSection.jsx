@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-import marsTexture from '../assets/images/marsTexture.jpg';
-import { motion } from 'framer-motion'
+import marsTexture from '../assets/images/marsTexture.webp';
+import { FaAnglesDown } from "react-icons/fa6";
+
 
 const HeroSection = () => {
   useEffect(() => {
@@ -97,9 +98,15 @@ const HeroSection = () => {
   return (
     <div className='relative w-full h-full'>
       <canvas className='webgl'></canvas>
-        <div className='absolute top-10 left-1/2 transform -translate-x-1/2 text-white lg:mt-96 mt-64 text-5xl md:text-8xl lg:text-8xl ml-1 lg:ml-3 font-semibold tracking-tighter h-full'>
+        <div className='absolute top-10 left-1/2 transform -translate-x-1/2 text-white lg:mt-96 mt-80 text-5xl md:text-8xl lg:text-8xl ml-1 lg:ml-3 font-semibold tracking-tighter h-44'>
           लोकसीमातिवर्तिन्
+          <h1 className='lg:hidden text-sm tracking-tighter text-center mt-4 font-[Montserrat]'>Swipe here</h1>
+          <div className=' lg:hidden flex justify-center'>
+          <FaAnglesDown className='text-sm'/>  
+          </div>
+          
         </div>
+        
     </div>
   );
 };
