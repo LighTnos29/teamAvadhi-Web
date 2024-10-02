@@ -97,7 +97,7 @@ const HeroSection = () => {
   return (
     <div className='relative w-full h-full'>
       <canvas className='webgl'></canvas>
-        <div className='absolute top-10 left-1/2 transform -translate-x-1/2 text-white lg:mt-96 mt-64 text-5xl md:text-8xl lg:text-8xl ml-1 lg:ml-3 font-semibold tracking-tighter'>
+        <div className='absolute top-10 left-1/2 transform -translate-x-1/2 text-white lg:mt-96 mt-64 text-5xl md:text-8xl lg:text-8xl ml-1 lg:ml-3 font-semibold tracking-tighter h-full'>
           लोकसीमातिवर्तिन्
         </div>
     </div>
