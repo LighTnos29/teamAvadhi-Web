@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 const About = () => {
     return (
-        <div className="bg-zinc-950 text-white h-[75vh] md:h-[90vh] p-20 md:p-[30vh]">
+        <div className="bg-zinc-950 text-white h-full md:h-[70vh] pb-20 p-5 md:p-20 md:pt-28 pt-24">
             <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}

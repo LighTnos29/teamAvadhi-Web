@@ -3,7 +3,7 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import marsTexture from '../assets/images/marsTexture.webp';
 import { FaAnglesDown } from "react-icons/fa6";
-
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
   useEffect(() => {
@@ -46,7 +46,7 @@ const HeroSection = () => {
     renderer.render(scene, camera);
 
     // Resize
-    window.addEventListener('resize', () => {
+    const handleResize = () => {
       sizes.width = window.innerWidth;
       sizes.height = window.innerHeight;
 
@@ -54,7 +54,9 @@ const HeroSection = () => {
       camera.aspect = sizes.width / sizes.height;
       camera.updateProjectionMatrix();
       renderer.setSize(sizes.width, sizes.height);
-    });
+    };
+
+    window.addEventListener('resize', handleResize);
 
     // Controls
     const control = new OrbitControls(camera, canvas);
@@ -63,10 +65,12 @@ const HeroSection = () => {
     control.enableZoom = false;
     control.autoRotateSpeed = 5;
 
+    // Animation Loop
+    let animationId;
     const loop = () => {
       control.update();
       renderer.render(scene, camera);
-      window.requestAnimationFrame(loop);
+      animationId = window.requestAnimationFrame(loop);
     };
     loop();
 
@@ -90,8 +94,10 @@ const HeroSection = () => {
 
     // Cleanup
     return () => {
-      window.removeEventListener('resize', () => { });
+      window.removeEventListener('resize', handleResize);
       canvas.removeEventListener('mousemove', onMouseMove);
+      window.cancelAnimationFrame(animationId);
+      renderer.dispose();
     };
   }, []);
 
@@ -101,10 +107,12 @@ const HeroSection = () => {
         <div className='absolute top-10 left-1/2 transform -translate-x-1/2 text-white lg:mt-96 mt-80 text-5xl md:text-8xl lg:text-8xl ml-1 lg:ml-3 font-semibold tracking-tighter h-44'>
           लोकसीमातिवर्तिन्
           <h1 className='lg:hidden text-sm tracking-tighter text-center mt-4 font-[Montserrat]'>Swipe here</h1>
-          <div className=' lg:hidden flex justify-center'>
+          <motion.div className=' lg:hidden flex justify-center'
+              animate={{ opacity: [1, 0, 1] }}
+              transition={{ repeat: Infinity, duration: 1 }}
+          >
           <FaAnglesDown className='text-sm'/>  
-          </div>
-          
+          </motion.div> 
         </div>
         
     </div>

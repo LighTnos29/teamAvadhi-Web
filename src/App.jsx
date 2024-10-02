@@ -10,13 +10,11 @@ function App() {
 
   return (
     <ReactLenis root>
-
       <Router>
         <Navbar />
         <AllRoutes />
         <Footer />
       </Router>
-
     </ReactLenis >
   )
 }

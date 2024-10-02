@@ -7,11 +7,10 @@ import {motion} from 'framer-motion'
 
 const Footer = () => {
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 text-white pt-28 md:h-[70vh] h-[90vh] md:pl-[20vh] pb-[90vh] md:pb-0 bg-zinc-950'>
-
+    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 text-white pt-28 md:h-[70vh] h-[90vh] md:pl-[20vh] pb-[100vh] md:pb-0 bg-zinc-950'>
       <div className='mb-10 md:mb-0 flex'>
         <img src={Logo} alt="logo" className='h-20 w-20 m-6' />
-        <div className='m-2 pr-10'>
+        <div className='m-2'>
           <p className='mt-4 text-2xl font-bold'>Team Avadhi</p>
           <p className='mt-6'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           <div className=' flex justify-center items-center w-full'>
@@ -30,7 +29,7 @@ const Footer = () => {
       </div>
 
       {/* Column 2 */}
-      <div className="ml-16">
+      <div className="lg:ml-16 p-10 pt-0  text-wrap">
         <div className='m-0 p-0 mt-10 flex text-lg'>
           <div className='h-10 w-10 absolute rounded-full'></div>
           <img src={Location} alt="Location-icon" className='h-10 w-10 m-2' />
