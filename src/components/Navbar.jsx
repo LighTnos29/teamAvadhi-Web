@@ -4,6 +4,7 @@ import navItems from "../constants/navItems"
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import Logo from "../assets/images/logo.svg"
+import {motion} from "framer-motion"
 
 
 const navbar = () => {
@@ -33,15 +34,23 @@ const navbar = () => {
         </div>
       </div>
       {mobileDrawerOpen && (
-        <div className="fixed right-0 z-20 bg-white-900 w-full p-12 flex flex-col justify-center items-center backdrop-blur-xl lg:hidden">
+        <motion.div className=" rounded-2xl fixed right-0 z-20 bg-white-900 w-full p-12 flex flex-col justify-center items-center bg-zinc-950 bg-opacity-70 lg:hidden"
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: "100%" }}
+        transition={{ type: "spring", stiffness: 60, damping: 15, duration: 0.5 }}
+        >
           <ul>
             {navItems.map((item, index) => (
-              <li key={index} className="py-4 text-xl font-semibold tracking-tighter">
+              <motion.li key={index} className="py-4 text-xl font-semibold tracking-tighter"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: index * 0.2 }}
+              >
                 <a href={item.path}>{item.name}</a>
-              </li>
+              </motion.li>
             ))}
           </ul>
-        </div>
+        </motion.div>
       )}
     </div>
   </nav>

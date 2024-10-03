@@ -1,6 +1,7 @@
 import React from 'react'
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import backround from '../assets/images/backround.jpg'
 
 const Contact = () => {
     const form = useRef();
@@ -24,10 +25,9 @@ const Contact = () => {
     };
   
     return (
-      <div className='w-full h-[700px] bg-zinc-950 text-white flex justify-center font-[Montserrat]'>
-        <img src="" alt="" />
+      <div className='w-full h-[700px] bg-zinc-950 text-white flex justify-center font-[Montserrat] bg-cover' style={{ backgroundImage: `url(${backround})`}}>
       <form ref={form} onSubmit={sendEmail}>
-        <div className='grid grid-cols-1 lg:w-[600px] w-full lg:mt-10 md:border-2 border-white rounded-xl p-20'>
+        <div className='grid grid-cols-1 lg:w-[600px] w-full lg:mt-10 md:border-2 border-white rounded-xl p-20 z-10 relative backdrop-blur-sm'>
         <h1 className='text-5xl text-center mb-10'>Contact Us</h1>
         <label className='text-xl mb-2'>Name</label>
         <input type="text" name="from_name" className='bg-transparent border-2 p-1 border-white rounded-sm outline-none mb-5' />
