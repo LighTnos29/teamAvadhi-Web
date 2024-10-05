@@ -1,15 +1,13 @@
 import React from "react";
 import { motion } from 'framer-motion'
+import Card from '../components/Card'
 
 const About = () => {
   return (
-    <div className="bg-zinc-950 h-[2200px] lg:h-[700px] w-full text-white text-wrap text p-20 lg:pl-36 lg:pr-36 text-xl tracking-tighter">
-      <motion.div
-    initial={{ opacity: 0 }}
-    whileInView={{ opacity: 1 }}
-    transition={{ delay: 0.2 }}
-      >
-        <h1 className="lg:text-6xl text-3xl font-bold text-center pb-10 trac">
+    <div>
+          <div className="bg-zinc-950 h-full lg:h-full w-full text-white text-wrap text p-20 lg:pl-36 lg:pr-36 text-xl tracking-tighter">
+      <div>
+        <h1 className="lg:text-6xl text-3xl font-bold text-center pb-10 tracking-tighter">
           About us
         </h1>
         <p className="text-center">
@@ -48,8 +46,18 @@ const About = () => {
           materials testing, and iterative prototyping to optimize their rocket
           designs for performance and safety.
         </p>
-      </motion.div>
+      </div>
     </div>
+
+    <div className="w-full p-28 bg-zinc-950 text-white">
+<div className="lg:text-6xl text-3xl font-bold text-center pb-10 tracking-tighter">Our Team</div>
+<div className="card">
+  <div className="">
+    <Card/>
+  </div>
+</div>
+</div>
+    </div> 
   );
 };
 

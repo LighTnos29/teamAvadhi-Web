@@ -34,7 +34,7 @@ const navbar = () => {
         </div>
       </div>
       {mobileDrawerOpen && (
-        <motion.div className=" rounded-2xl fixed right-0 z-20 bg-white-900 w-full p-12 flex flex-col justify-center items-center bg-zinc-950 bg-opacity-70 lg:hidden"
+        <motion.div className="rounded-b-2xl fixed right-0 z-20 bg-white-900 w-full p-12 flex flex-col justify-center items-center bg-zinc-950 bg-opacity-70 lg:hidden"
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: "100%" }}
         transition={{ type: "spring", stiffness: 60, damping: 15, duration: 0.5 }}
