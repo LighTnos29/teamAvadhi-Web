@@ -7,6 +7,7 @@ import Events from "../pages/Events"
 import About from "../pages/About"
 import Projects from "../pages/Projects"
 import Register from "../pages/Registration"
+import Registered from '../pages/Registered';
 
 const AllRoutes = () => {
     return (
@@ -19,6 +20,7 @@ const AllRoutes = () => {
                 <Route path="/sponsors" element={<Sponsors />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/register" element={<Register />} />
+                <Route path="/registered" element={<Registered/>}/>
             </Routes>
         </div>
     )

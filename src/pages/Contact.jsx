@@ -15,8 +15,8 @@ const Contact = () => {
         })
         .then(
           () => {
-            alert("Your query has been recorded , we will get back to you.")
-            // window.location.href = '/'
+            // alert("Your query has been recorded , we will get back to you.")
+            window.location.href = '/registered'
           },
           (error) => {
             console.log('FAILED...', error.text);
@@ -30,11 +30,11 @@ const Contact = () => {
         <div className='grid grid-cols-1 lg:w-[600px] w-full lg:mt-10 md:border-2 border-white rounded-xl p-20 z-10 relative backdrop-blur-sm'>
         <h1 className='text-5xl text-center mb-10'>Contact Us</h1>
         <label className='text-xl mb-2'>Name</label>
-        <input type="text" name="from_name" className='bg-transparent border-2 p-1 border-white rounded-sm outline-none mb-5' />
+        <input required type="text" name="from_name" className='bg-transparent border-2 p-1 border-white rounded-sm outline-none mb-5' />
         <label className='text-xl mb-2'>Email</label>
-        <input type="email" name="user_email"className='bg-transparent border-2 p-1 border-white rounded-sm outline-none mb-5'/>
+        <input required type="email" name="user_email"className='bg-transparent border-2 p-1 border-white rounded-sm outline-none mb-5'/>
         <label className='text-xl mb-2'>Message</label>
-        <textarea name="message" className='bg-transparent border-2 p-1 border-white rounded-sm outline-none mb-5' />
+        <textarea required name="message" className='bg-transparent border-2 p-1 border-white rounded-sm outline-none mb-5' />
         <input type="submit" value="Send" className='py-2 px-6 border-2 border-white rounded-md bg-transparent hover:bg-emerald-500'  />
         </div>
   

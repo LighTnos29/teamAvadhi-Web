@@ -5,7 +5,7 @@ import Card from '../components/Card'
 const About = () => {
   return (
     <div>
-          <div className="bg-zinc-950 h-full lg:h-full w-full text-white text-wrap text p-20 lg:pl-36 lg:pr-36 text-xl tracking-tighter">
+          <div className="bg-zinc-950 h-full lg:h-full w-full text-white text-wrap text p-10 lg:pl-36 lg:pr-36 text-xl tracking-tighter">
       <div>
         <h1 className="lg:text-6xl text-3xl font-bold text-center pb-10 tracking-tighter">
           About us
